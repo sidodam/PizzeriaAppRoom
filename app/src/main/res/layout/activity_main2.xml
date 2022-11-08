@@ -64,7 +64,7 @@
 
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/elegir"
                 android:padding="16dp"
                 android:backgroundTint="#FF7F50"
                 android:layout_marginRight="50dp"

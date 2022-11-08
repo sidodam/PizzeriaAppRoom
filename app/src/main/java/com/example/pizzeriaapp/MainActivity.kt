@@ -16,11 +16,6 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        val loginCredentials = object {
-            val usernmae = "asdf"
-            val pass = "root"
-
-        }
 
         data class ID(
             val username: String,
