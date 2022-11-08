@@ -16,9 +16,9 @@ class MainActivity3 : AppCompatActivity() {
         binding = ActivityMain3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var paperoniPizza = 0
-        var cuatroqeusoPizza = 0
-        var mozzarellaiPizza = 0
+        var paperoniPizza = 1
+        var cuatroqeusoPizza = 1
+        var mozzarellaiPizza = 1
 
 
             binding.btnPaperoni.setOnClickListener{

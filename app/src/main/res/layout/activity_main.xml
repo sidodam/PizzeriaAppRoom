@@ -30,7 +30,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            app:hintTextColor="@color/material_dynamic_neutral99"
+            app:hintTextColor="#5D3FD3"
             android:layout_width="323dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -54,7 +54,7 @@
 
         <!--  white color: material_dynamic_neutral99 -->
         <com.google.android.material.textfield.TextInputLayout
-            app:hintTextColor="@color/material_dynamic_neutral99"
+            app:hintTextColor="#5D3FD3"
             android:layout_width="323dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
