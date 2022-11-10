@@ -45,11 +45,7 @@ class MainActivity3 : AppCompatActivity() {
                 }
 
 
-                 if (message.length!= -1)
-                 {
 
-                     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-                 }
 
             }
 
@@ -78,11 +74,7 @@ class MainActivity3 : AppCompatActivity() {
             }
 
 
-            if (message.length!= -1)
-            {
 
-                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-            }
 
         }
 
@@ -112,12 +104,16 @@ class MainActivity3 : AppCompatActivity() {
             }
 
 
-            if (message.length!= -1)
-            {
+        }
 
-                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-            }
+        binding.imagePaperoni.setOnLongClickListener {
 
+            val bundle = Bundle()
+            bundle.putInt("pizza", binding.imagePaperoni.id)
+            val intent = Intent(this , MainActivity5::class.java)
+            intent.putExtras(bundle)
+            startActivity(intent)
+            true
         }
 
 
@@ -135,67 +131,67 @@ class MainActivity3 : AppCompatActivity() {
             when (view.getId()) {
                 binding.big2.id ->
                     if (checked) {
-                        binding.imageView9.layoutParams.height = 300;
-                        binding.imageView9.layoutParams.height = 300;
-                        binding.imageView9.requestLayout()
+                        binding.imagePaperoni.layoutParams.height = 300;
+                        binding.imagePaperoni.layoutParams.height = 300;
+                        binding.imagePaperoni.requestLayout()
                     }
 
                 binding.medium2.id ->
                     if (checked) {
-                        binding.imageView9.layoutParams.height = 200;
-                        binding.imageView9.layoutParams.height = 200;
-                        binding.imageView9.requestLayout()
+                        binding.imagePaperoni.layoutParams.height = 200;
+                        binding.imagePaperoni.layoutParams.height = 200;
+                        binding.imagePaperoni.requestLayout()
                     }
 
                 binding.small2.id ->
                     if (checked) {
-                        binding.imageView9.layoutParams.height = 150;
-                        binding.imageView9.layoutParams.height = 150;
-                        binding.imageView9.requestLayout()
+                        binding.imagePaperoni.layoutParams.height = 150;
+                        binding.imagePaperoni.layoutParams.height = 150;
+                        binding.imagePaperoni.requestLayout()
                     }
 
 
                 binding.big.id ->
                        if (checked) {
-                        binding.imageView5.layoutParams.height = 300;
-                        binding.imageView5.layoutParams.height = 300;
-                        binding.imageView5.requestLayout()
+                        binding.imageCuatroQuesos.layoutParams.height = 300;
+                        binding.imageCuatroQuesos.layoutParams.height = 300;
+                        binding.imageCuatroQuesos.requestLayout()
                     }
 
                 binding.medium.id ->
                     if (checked) {
-                        binding.imageView5.layoutParams.height = 200;
-                        binding.imageView5.layoutParams.height = 200;
-                        binding.imageView5.requestLayout()
+                        binding.imageCuatroQuesos.layoutParams.height = 200;
+                        binding.imageCuatroQuesos.layoutParams.height = 200;
+                        binding.imageCuatroQuesos.requestLayout()
                     }
 
                 binding.small.id ->
                     if (checked) {
-                        binding.imageView5.layoutParams.height = 150;
-                        binding.imageView5.layoutParams.height = 150;
-                        binding.imageView5.requestLayout()
+                        binding.imageCuatroQuesos.layoutParams.height = 150;
+                        binding.imageCuatroQuesos.layoutParams.height = 150;
+                        binding.imageCuatroQuesos.requestLayout()
                     }
 
 
                 binding.big3.id ->
                     if (checked) {
-                        binding.imageView6.layoutParams.height = 300;
-                        binding.imageView6.layoutParams.height = 300;
-                        binding.imageView6.requestLayout()
+                        binding.imageMozzarella.layoutParams.height = 300;
+                        binding.imageMozzarella.layoutParams.height = 300;
+                        binding.imageMozzarella.requestLayout()
                     }
 
                 binding.medium3.id ->
                     if (checked) {
-                        binding.imageView6.layoutParams.height = 200;
-                        binding.imageView6.layoutParams.height = 200;
-                        binding.imageView6.requestLayout()
+                        binding.imageMozzarella.layoutParams.height = 200;
+                        binding.imageMozzarella.layoutParams.height = 200;
+                        binding.imageMozzarella.requestLayout()
                     }
 
                 binding.small3.id ->
                     if (checked) {
-                        binding.imageView6.layoutParams.height = 150;
-                        binding.imageView6.layoutParams.height = 150;
-                        binding.imageView6.requestLayout()
+                        binding.imageMozzarella.layoutParams.height = 150;
+                        binding.imageMozzarella.layoutParams.height = 150;
+                        binding.imageMozzarella.requestLayout()
                     }
 
             }
