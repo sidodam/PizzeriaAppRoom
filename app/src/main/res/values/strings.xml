@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PizzeriaApp</string>
+    <string name="total">TOTAL %d:</string>
 </resources>

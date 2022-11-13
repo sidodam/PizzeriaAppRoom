@@ -27,16 +27,21 @@ class MainActivity3 : AppCompatActivity() {
 
                  if (binding.big2.isChecked)
                  {    message = "added one big paperoni , total is " + paperoniPizza
+                     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
                      paperoniPizza++;
                  }
 
                else if (binding.medium2.isChecked)
                 {    message = "added one medium paperoni , total is " + paperoniPizza
+                    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                     paperoniPizza++;
                 }
 
                  else if (binding.small2.isChecked)
                  {    message = "added one small paperoni , total is " + paperoniPizza
+                     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                      paperoniPizza++;
                  }
                 else{
@@ -56,16 +61,22 @@ class MainActivity3 : AppCompatActivity() {
 
             if (binding.big.isChecked)
             {    message = "added one big quatro queso , total is " + cuatroqeusoPizza
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                 cuatroqeusoPizza++;
             }
 
             else if (binding.medium.isChecked)
             {    message = "added one medium quatro queso , total is " + cuatroqeusoPizza
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                 cuatroqeusoPizza++;
             }
 
             else if (binding.small.isChecked)
             {    message = "added one small quatro queso , total is " + cuatroqeusoPizza
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                 cuatroqeusoPizza++;
             }
             else{
@@ -86,16 +97,22 @@ class MainActivity3 : AppCompatActivity() {
 
             if (binding.big2.isChecked)
             {    message = "added one big mozzarella , total is " + mozzarellaiPizza
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                 mozzarellaiPizza++;
             }
 
             else if (binding.medium2.isChecked)
             {    message = "added one medium mozzarella , total is " + mozzarellaiPizza
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                 mozzarellaiPizza++;
             }
 
             else if (binding.small2.isChecked)
             {    message = "added one small mozzarella , total is " + mozzarellaiPizza
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
                 mozzarellaiPizza++;
             }
             else{
@@ -110,6 +127,30 @@ class MainActivity3 : AppCompatActivity() {
 
             val bundle = Bundle()
             bundle.putInt("pizza", binding.imagePaperoni.id)
+            bundle.putString("pizzaType", "Paperoni")
+            val intent = Intent(this , MainActivity5::class.java)
+            intent.putExtras(bundle)
+            startActivity(intent)
+            true
+        }
+
+
+        binding.imageMozzarella.setOnLongClickListener {
+
+            val bundle = Bundle()
+            bundle.putInt("pizza", binding.imageMozzarella.id)
+            bundle.putString("pizzaType", "Mozzarella")
+            val intent = Intent(this , MainActivity5::class.java)
+            intent.putExtras(bundle)
+            startActivity(intent)
+            true
+        }
+
+        binding.imageCuatroQuesos.setOnLongClickListener {
+
+            val bundle = Bundle()
+            bundle.putInt("pizza", binding.imageCuatroQuesos.id)
+            bundle.putString("pizzaType", "CuatroQuesos")
             val intent = Intent(this , MainActivity5::class.java)
             intent.putExtras(bundle)
             startActivity(intent)

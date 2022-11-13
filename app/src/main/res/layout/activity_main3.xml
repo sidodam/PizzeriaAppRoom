@@ -256,44 +256,7 @@
             android:orientation="vertical">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btn1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Añadir" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/btn2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Añadir" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/btn3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Añadir" />
-
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -305,7 +268,7 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Personalizar" />
+                    android:text="Añadir" />
 
 
                 <Space
@@ -318,7 +281,7 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Personalizar" />
+                    android:text="Añadir" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -331,7 +294,7 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Personalizar" />
+                    android:text="Añadir" />
 
 
             </LinearLayout>

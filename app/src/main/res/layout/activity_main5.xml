@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioGroup
+            android:id="@+id/btnGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation='horizontal'
@@ -26,31 +27,33 @@
             >
 
             <RadioButton
+                android:onClick="onSizeClick"
                 android:gravity="center"
-                android:id="@+id/big2"
+                android:id="@+id/bigSize"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
                 android:layout_weight="1"
-                android:onClick="onRadioButtonClicked"
+
                 android:text="big" />
 
             <RadioButton
+                android:onClick="onSizeClick"
                 android:gravity="center"
-                android:id="@+id/medium2"
+                android:id="@+id/mediumSize"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onRadioButtonClicked"
+
                 android:text="medium" />
 
             <RadioButton
+                android:onClick="onSizeClick"
                 android:gravity="center"
-                android:id="@+id/small2"
+                android:id="@+id/smallSize"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="onRadioButtonClicked"
                 android:text="small" />
         </RadioGroup>
 
@@ -77,28 +80,48 @@
 
 
             <Button
+
                 android:layout_marginRight="5dp"
-                android:id="@+id/button433"
+
+                android:id="@+id/masPaperoni"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="+" />
 
+            <TextView
+                android:id="@+id/paperoniCont"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="0" />
             <Button
-                android:id="@+id/button433sd"
+
+                android:id="@+id/menosPaperoni"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="-" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/extraPaperoni"
                 android:layout_width="288dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Extra Paperoni" />
+
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"-->
+            <!--                android:layout_width="50dp"-->
+            <!--                android:layout_height="50dp"-->
+            <!--                android:textColor="@color/design_default_color_background"-->
+            <!--                android:backgroundTint="@color/purple_500"-->
+            <!--                android:text="VETE A CESTA"-->
+            <!--                app:cornerRadius="100dp" />-->
 
 
         </LinearLayout>
@@ -112,15 +135,26 @@
 
 
             <Button
+
                 android:layout_marginRight="5dp"
-                android:id="@+id/buttonsdfsf433"
+                android:id="@+id/masQueso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="+" />
 
+            <TextView
+                android:id="@+id/quesoCont"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"/>
+
             <Button
-                android:id="@+id/button4sdf33sd"
+
+                android:id="@+id/menosQueso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -129,7 +163,7 @@
 
 
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/extraQueso"
                 android:layout_width="288dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -140,38 +174,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-
-            <Button
-                android:layout_marginRight="5dp"
-                android:id="@+id/buttosdfn433"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+" />
-
-            <Button
-                android:id="@+id/button433ssdfd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="-" />
-
-            <TextView
-                android:id="@+id/textView4ds3"
-                android:layout_width="288dp"
-                android:layout_height="38dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Añade Pimiento  " />
-
-        </LinearLayout>
 
 
 
@@ -195,21 +197,24 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button43asd3asdasd3"
+                android:id="@+id/cartBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="IR A CESTA" />
 
+
+
             <TextView
-                android:id="@+id/textVieasdw4ds3"
+                android:id="@+id/priceTotal"
                 android:layout_width="288dp"
                 android:layout_height="38dp"
                 android:layout_weight="1"
                 android:gravity="left"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="10dp"
-                android:text="TOTAL: " />
+                android:text="Total" />
+
 
 
 
