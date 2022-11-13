@@ -73,14 +73,13 @@
                 android:text="Eligir Pizza" />
 
 
-
             <Button
-                android:backgroundTint="#6495ED"
                 android:id="@+id/button2"
-                android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Configurar" />
+                android:backgroundTint="#6495ED"
+                android:padding="16dp"
+                android:text="Repetir Ultimo Pedido" />
 
 
 

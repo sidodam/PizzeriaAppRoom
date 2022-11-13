@@ -44,12 +44,19 @@ class MainActivity2 : AppCompatActivity() {
         }
 
 
-//
-//        binding.logOut.setOnClickListener{
-//            Toast.makeText(this, "Logging out", Toast.LENGTH_SHORT).show()
-//            val intent = Intent(this , MainActivity::class.java)
-//            startActivity(intent)
-//        }
+
+        binding.button2.setOnClickListener{
+
+
+
+            val intent = Intent(this , MainActivity4::class.java)
+
+            startActivity(intent)
+
+        }
+
+
+
 
 
 

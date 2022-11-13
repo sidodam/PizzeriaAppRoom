@@ -188,10 +188,13 @@ class MainActivity5 : AppCompatActivity() {
                 if (bundle != null) {
                     bundle2.putString("pizzaType", bundle.getString("pizzaType"))
 
-                    bundle2.putString("pizzaSize", bundle.getString(chosenSize))
 
 
                 }
+                bundle2.putString("pizzaSize", chosenSize)
+                bundle2.putString("total", FinalPrice.toString() )
+
+
                 val intent = Intent(this , MainActivity4::class.java)
                 intent.putExtras(bundle2)
                 startActivity(intent)

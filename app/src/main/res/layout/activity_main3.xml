@@ -299,17 +299,16 @@
 
             </LinearLayout>
 
-<!--            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"-->
-<!--            looks like above style with even dimensions and corner radius produce a perfect circle-->
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="153dp"
-                android:layout_height="153dp"
-                android:layout_marginTop="50dp"
-                android:textColor="@color/design_default_color_background"
-                android:backgroundTint="@color/purple_500"
-                android:text="VETE A CESTA"
-                app:cornerRadius="100dp" />
+
+            <Button
+
+                android:id="@+id/goToCart"
+                android:layout_marginTop="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="Ir a cesta" />
+
+
 
 
         </LinearLayout>

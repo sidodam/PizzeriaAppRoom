@@ -15,6 +15,9 @@ class MainActivity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMain3Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        val bundle = intent.extras
+
+
 
         var paperoniPizza = 1
         var cuatroqeusoPizza = 1
@@ -158,6 +161,22 @@ class MainActivity3 : AppCompatActivity() {
         }
 
 
+        binding.goToCart.setOnClickListener{
+
+
+            val bundle = Bundle()
+            bundle.putString("pizzaPapi", paperoniPizza.toString())
+            bundle.putString("pizzaCuatro", cuatroqeusoPizza.toString())
+            bundle.putString("pizzaMozzarella", mozzarellaiPizza.toString())
+
+            val intent = Intent(this , MainActivity4::class.java)
+            intent.putExtras(bundle)
+            startActivity(intent)
+
+
+        }
+
+
 
 
     }
@@ -240,3 +259,6 @@ class MainActivity3 : AppCompatActivity() {
 
     }
 }
+
+
+
