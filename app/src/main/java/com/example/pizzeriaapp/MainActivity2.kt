@@ -44,21 +44,21 @@ class MainActivity2 : AppCompatActivity() {
         }
 
 
-
         binding.button2.setOnClickListener{
 
 
-
             val intent = Intent(this , MainActivity4::class.java)
-
             startActivity(intent)
 
         }
 
-
-
-
-
-
     }
 }
+
+
+
+
+
+
+
+

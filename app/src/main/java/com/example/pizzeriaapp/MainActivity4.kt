@@ -3,6 +3,7 @@ package com.example.pizzeriaapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.pizzeriaapp.databinding.ActivityMain2Binding
 import com.example.pizzeriaapp.databinding.ActivityMain4Binding
 import com.example.pizzeriaapp.databinding.ActivityMain5Binding
@@ -22,6 +23,8 @@ class MainActivity4 : AppCompatActivity() {
 
             val strBuilder = StringBuilder()
             val strBuilder2 = StringBuilder()
+
+
             if (bundle.getString("pizzaSize") != null &&  bundle.getString("pizzaType") != null && bundle.getString("total") !=null )
             {
 
@@ -56,12 +59,10 @@ class MainActivity4 : AppCompatActivity() {
             }
 
 
-            binding.pagaYa.setOnClickListener{
 
 
 
 
-            }
 
 
 
