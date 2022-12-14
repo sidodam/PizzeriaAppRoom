@@ -7,6 +7,9 @@ import android.widget.Toast
 import com.example.pizzeriaapp.databinding.ActivityMain2Binding
 import com.example.pizzeriaapp.databinding.ActivityMain4Binding
 import com.example.pizzeriaapp.databinding.ActivityMain5Binding
+import android.util.Log
+import com.example.pizzeriaapp.data.User
+import com.example.pizzeriaapp.data.UserDatabase
 
 class MainActivity4 : AppCompatActivity() {
 
@@ -18,54 +21,19 @@ class MainActivity4 : AppCompatActivity() {
 
         val bundle = intent.extras
 
-
+        var db = UserDatabase.getInstance(this)?.userDao()!!
         if (bundle != null){
 
-            val strBuilder = StringBuilder()
-            val strBuilder2 = StringBuilder()
+
+            val allp= db.readlAllData()
+            binding.recycler.adapter =PizzAdapter(allp)
 
 
-            if (bundle.getString("pizzaSize") != null &&  bundle.getString("pizzaType") != null && bundle.getString("total") !=null )
-            {
-
-                strBuilder.appendLine("1." + bundle.getString("pizzaSize"))
-                strBuilder.appendLine("2." + "Numero de Pizzas: 1")
-
-                binding.textView6.text = bundle.getString("pizzaType")
-                binding.textView5.text  = strBuilder
-                binding.textView.text  = "TOTAL:" +  bundle.getString("total") + "€"
-
-            }
-
-
-            else if (bundle !=null)
-            {
-
-                strBuilder.appendLine("1)" + "numero de pizza papi" + " " +   bundle.getString("pizzaPapi"))
-                strBuilder.appendLine("2)" + "Numero de Pizzas cuatro queso" +  " " +  bundle.getString("pizzaCuatro"))
-                strBuilder.appendLine("3)" + "Numero de Pizzas Mozzarella" + " " +  bundle.getString("pizzaMozzarella"))
-                binding.textView5.text  = strBuilder
-
-                strBuilder2.appendLine("Pizza Peperoni")
-                strBuilder2.appendLine("Pizza Cuatro Queso")
-                strBuilder2.appendLine("Pizza Mozzarella")
-                binding.textView6.text = strBuilder2
 
                 binding.textView.text  = "TOTAL:" + (  bundle.getString("pizzaPapi").toString().toInt() * 8 +     bundle.getString("pizzaCuatro").toString().toInt() * 8 +
 
                         bundle.getString("pizzaMozzarella").toString().toInt() * 8
                         ).toString()       + "€"
-
-            }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -74,7 +42,22 @@ class MainActivity4 : AppCompatActivity() {
 
 
 
+       binding.pagaYa.setOnClickListener{
 
+            val total = bundle?.getString("pizzaPapi").toString().toInt() * 8 + bundle?.getString("pizzaCuatro").toString().toInt() * 8 +  bundle?.getString("pizzaMozzarella").toString().toInt() * 8
+
+             val ps =  bundle?.getString("pizzaPapi").toString()
+             val pm =  bundle?.getString("pizzaCuatro").toString()
+             val pb = bundle?.getString("pizzaMozzarella").toString()
+
+           bundle?.getString("pizzaMozzarella").toString().toInt() * 8
+
+           Log.d("sidoo" , db.readlAllData().size.toString())
+
+           db.addUser(User(0 ,"sido" , "nido" ,ps , pm , pb , total) )
+
+
+       }
 
 
 

@@ -98,21 +98,21 @@ class MainActivity3 : AppCompatActivity() {
 
             var message = "";
 
-            if (binding.big2.isChecked)
+            if (binding.big3.isChecked)
             {    message = "added one big mozzarella , total is " + mozzarellaiPizza
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
                 mozzarellaiPizza++;
             }
 
-            else if (binding.medium2.isChecked)
+            else if (binding.medium3.isChecked)
             {    message = "added one medium mozzarella , total is " + mozzarellaiPizza
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
                 mozzarellaiPizza++;
             }
 
-            else if (binding.small2.isChecked)
+            else if (binding.small3.isChecked)
             {    message = "added one small mozzarella , total is " + mozzarellaiPizza
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
@@ -120,7 +120,7 @@ class MainActivity3 : AppCompatActivity() {
             }
             else{
 
-                Toast.makeText(this, "select size please!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "please size please!", Toast.LENGTH_SHORT).show()
             }
 
 

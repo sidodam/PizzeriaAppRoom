@@ -19,8 +19,10 @@ interface UserDao {
     fun retrieveUser(title:String): LiveData<List<User>>
     //    @Query("UPDATE orders SET order_amount = :amount, price = :price WHERE order_id =:id")
     //    void update(Float amount, Float price, int id);
-    @Query("UPDATE user_table SET password = :newPass")
-     fun  updateUser(newPass : String)
-
+    @Query("UPDATE user_table SET  username = :user, password =:pass , pizza_small =:ps  ,pizza_medium=:pm ,piiza_big=:pb , totalPedido=:tp")
+     fun  updateUser(user : String , pass:String, ps:String , pm:String , pb:String , tp:Int)
+     @Query("SELECT * FROM user_table ORDER BY id DESC LIMIT 1;")
+     fun  getUser():User
+//
 
 }

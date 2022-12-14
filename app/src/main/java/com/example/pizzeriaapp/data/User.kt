@@ -10,4 +10,8 @@ data class User(
     val id : Int ,
     val username : String,
     val password : String,
+    val pizza_small: String ,
+    val pizza_medium: String ,
+    val piiza_big : String ,
+    val totalPedido : Int = 0
 )

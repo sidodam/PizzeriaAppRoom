@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pizzeriaapp.data.User
 
-class PizzAdapter(private val users: List<User>, private val mContext: Context) :
+class PizzAdapter(private val users: List<User>) :
     RecyclerView.Adapter<PizzAdapter.DicViewHolder>() {
 
 
@@ -19,7 +19,7 @@ class PizzAdapter(private val users: List<User>, private val mContext: Context) 
 
 
         var view =
-            LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
 
         return DicViewHolder(view)
     }
@@ -28,7 +28,6 @@ class PizzAdapter(private val users: List<User>, private val mContext: Context) 
         var u = users[position]
 
         holder.bind(u)
-        holder.onClick(mContext)
 
     }
 
@@ -40,32 +39,21 @@ class PizzAdapter(private val users: List<User>, private val mContext: Context) 
     class DicViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
 
-        var t1: TextView = view.findViewById(R.id.Username)
-        var t2: TextView = view.findViewById(R.id.Password)
-        var t3: TextView = view.findViewById(R.id.big)
-
-        var btn: Button = view.findViewById(R.id.big)
+        var t1: TextView = view.findViewById(R.id.textFirst)
+        var t2: TextView = view.findViewById(R.id.textSecond)
+        var t3: TextView = view.findViewById(R.id.textThird)
 
 
-        fun bind(u: User) {
+        fun bind(user: User) {
 
-            this.t1.text = this.t1.text.toString()
-            this.t2.text = this.t2.text.toString()
-            this.t3.text = this.t3.text.toString()
-
+           this.t1.text = "pizza Peperoni"  +  user.pizza_small
+           this.t2.text = "pizza Quatro Queso"  + user.pizza_medium
+            this.t3.text = "pizza Mozzarella"  + user.piiza_big
 
         }
 
 
-        fun onClick(context: Context) {
 
-            btn.setOnClickListener {
-
-
-                Toast.makeText(context, "pedido aniadido", Toast.LENGTH_SHORT).show()
-
-            }
-        }
 
 
     }

@@ -18,18 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-        var db = Room.databaseBuilder(
-            this, UserDatabase::class.java,
-            "user_database"
 
-        ).allowMainThreadQueries().createFromAsset("user_table.db").build()
+
+        var db = UserDatabase.getInstance(this)?.userDao()!!
 
 //          db.userDao().delete()
 
-        var allUsers = db.userDao().readlAllData()
+        var allUsers = db.readlAllData()
 
 
-        d( "sidoo" , " ${allUsers[0].username}")
+
 
 
         binding = ActivityMainBinding.inflate(layoutInflater)
